@@ -17,7 +17,7 @@ var roomDefinitions = {
         "truck": 6
     },
     "E21S48": {
-        "harvestersPerSource": 2,
+        "harvestersPerSource": 1,
         "build": 0,
         "truck": 0
     }
@@ -38,25 +38,25 @@ module.exports.loop = function () {
 
         //if not yet claimed, try to do so
         if (room == undefined) {
-            //var claimCreep = Game.creeps['CLAIMER'];
-            //if(claimCreep == undefined){
-            //    console.log(rn + ' not yet claimed');
+            // var claimCreep = Game.creeps['CLAIMER'];
+            // if(claimCreep == undefined){
+            //    console.log(roomName + ' not yet claimed');
             //    console.log('no claimer creep. Trying to spawn');
-
-            //    Game.spawns.Spawn1.createCreep([CLAIM, MOVE], 'CLAIMER');
-
-            //} else {
+            //
+            //    Game.spawns.Spawn1.createCreep([WORK, MOVE, WORK, MOVE], 'CLAIMER');
+            //
+            // } else {
             //    console.log('Claiming ' + roomName);
-            //    var target = Game.getObjectById('577b93b50f9d51615fa488d7');
-
-            //    var claimResult = claimCreep.claimController(target);
-
+            //    var target = new RoomPosition(40, 9, 'E21S48');
+            //    console.log(target);
+            //    var claimResult = claimCreep.moveTo(target);
+            //
             //    console.log(claimResult);
-
+            //
             //    if(claimResult == ERR_NOT_IN_RANGE) {
             //        claimCreep.moveTo(target);
             //    }
-            //}
+            // }
 
             continue;
         }
@@ -77,6 +77,7 @@ module.exports.loop = function () {
 /* handleRoom handles the creeps in a Room ro */
 handleRoom = function (room) {
     checkRoomSetup(room);
+    console.log(room);
 
     if (room.memory.sources === undefined) {
         room.memory.sources = room.find(FIND_SOURCES).map(function (source) {
