@@ -67,6 +67,8 @@ module.exports = {
             ba[i + 1] = MOVE;
         }
 
-        return spawn.spawnCreep(so.room, harvesterName, ba, "harvester");
+        var creepName = spawn.spawnCreep(so.room, harvesterName, ba, "harvester");
+        console.log('Spawining new harvester ' + creepName);
+        return creepName;
     }
 };

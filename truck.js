@@ -54,7 +54,9 @@ module.exports = {
             ba[i + 1] = MOVE;
         }
 
-        return spawn.spawnCreep(r, n, ba, "truck");
+        var creepName = spawn.spawnCreep(r, n, ba, "truck");
+        console.log('Spawining new builder ' + creepName);
+        return creepName;
     },
 
     /* pickupEnergy causes Creep c to pick up energy in its room */

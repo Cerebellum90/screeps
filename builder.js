@@ -59,6 +59,8 @@ module.exports = {
             ba[i + 3] = MOVE;
         }
 
-        return spawn.spawnCreep(r, n, ba, "builder");
+        var creepName = spawn.spawnCreep(r, n, ba, "builder");
+        console.log('Spawining new builder ' + creepName);
+        return creepName;
     }
 };
