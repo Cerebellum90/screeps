@@ -260,6 +260,12 @@ findBrokenInRoom = function (objectType, room) {
     if (cs.length === 0) {
         return undefined;
     }
+
+    //order broken items to fix so that the structure with the least hits left will be fixed first
+    cs.sort(function(a, b) {
+        return a.hits > b.hits;
+    });
+
     return cs[0];
 }
 
