@@ -55,7 +55,7 @@ module.exports = {
         }
 
         var creepName = spawn.spawnCreep(r, n, ba, "truck");
-        console.log('Spawining new builder ' + creepName);
+        console.log('Spawining new truck ' + creepName);
         return creepName;
     },
 
