@@ -46,8 +46,8 @@ module.exports = {
             ec = 300;
         }
 
-        if(ec > 500){
-            ec = 500;
+        if(ec > 750){
+            ec = 750;
         }
 
         /* Make an array to hold the appropriate amount of body */

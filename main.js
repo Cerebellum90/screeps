@@ -14,7 +14,7 @@ var roomDefinitions = {
     "E21S49": {
         "harvestersPerSource": 2,
         "build": 3,
-        "truck": 6
+        "truck": 5
     },
     "E21S48": {
         "harvestersPerSource": 1,
@@ -77,7 +77,6 @@ module.exports.loop = function () {
 /* handleRoom handles the creeps in a Room ro */
 handleRoom = function (room) {
     checkRoomSetup(room);
-    console.log(room);
 
     if (room.memory.sources === undefined) {
         room.memory.sources = room.find(FIND_SOURCES).map(function (source) {
