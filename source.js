@@ -47,7 +47,6 @@ module.exports = {
 
     /* makeHarvester makes a harvester for Source so */
     makeHarvester: function (so, harvesterName) {
-        console.log('making harvester ' + harvesterName);
         var ec = roomEnergyCapacity(so.room); /* Effective energy capacity */
         /* Assume at least 300 capacity */
         if (ec < 300 ||

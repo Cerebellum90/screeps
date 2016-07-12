@@ -15,6 +15,13 @@ module.exports = {
             console.log("> Time         " + Game.time);
             console.log("> GCL          Level " + Game.gcl.level + " Progress " + (Game.gcl.progressTotal-Game.gcl.progress) );
 
+            for (var roomName in Game.rooms) {
+                var room = Game.rooms[roomName];
+                if(room === undefined) continue;
+
+                console.log("> Controller   " + roomName + " Level " + room.controller.level + " Progress, " + (room.controller.progressTotal-room.controller.progress) + " to go for next level.");
+            }
+
             console.log("-----");
         }
 
